@@ -7,8 +7,8 @@ const frameMetadata = getFrameMetadata({
       label: "Start",
     },
   ],
-  image: `${process.env.VERCEL_URL}/next.svg`,
-  postUrl: `${process.env.VERCEL_URL}/api/frame?id=1`,
+  image: `${process.env.NEXT_PUBLIC_BASE_URL}/next.svg`,
+  postUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
 });
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Frames Demo",
     description: "Second attempt on frames using coinbase",
-    images: [`${process.env.VERCEL_URL}/next.svg`],
+    images: [`${process.env.NEXT_PUBLIC_BASE_URL}/next.svg`],
   },
   other: { ...frameMetadata },
 };

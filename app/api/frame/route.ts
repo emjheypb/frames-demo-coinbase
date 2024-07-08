@@ -39,7 +39,7 @@ const getResponse = async (req: NextRequest): Promise<NextResponse> => {
           <meta property="fc:frame:button:1" content="<"/>
           <meta property="fc:frame:button:1:post_url" content="${
             process.env.NEXT_PUBLIC_BASE_URL
-          }/frame?id=${idAsNumber === 1 ? 0 : idAsNumber + 1}"/>
+          }/frame?id=${idAsNumber === 1 ? 1 : idAsNumber + 1}"/>
           <meta property="fc:frame:button:2" content=">"/>
           <meta property="fc:frame:button:2:post_url" content="${
             process.env.NEXT_PUBLIC_BASE_URL

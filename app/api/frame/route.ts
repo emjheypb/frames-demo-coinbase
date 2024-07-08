@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
+const images = ["book_blue", "book_brown", "book_purple"];
+
 const getResponse = async (req: NextRequest): Promise<NextResponse> => {
   const searchParams = req.nextUrl.searchParams;
   const id: any = searchParams.get("id");
@@ -11,13 +13,17 @@ const getResponse = async (req: NextRequest): Promise<NextResponse> => {
         <head>
         <title>Frame 7</title>
         <meta property="fc:frame" content="vNext"/>
-        <meta property="fc:frame:image" content="${process.env.NEXT_PUBLIC_BASE_URL}/next.svg"/>
+        <meta property="fc:frame:image" content="${
+          process.env.NEXT_PUBLIC_BASE_URL
+        }/${images[id - 1]}.png"/>
         <meta property="fc:frame:button:1" content="GitHub"/>
         <meta property="fc:frame:button:1:action" content="post_redirect"/>
         <meta property="fc:frame:button:2" content="YouTube Link"/>
         <meta property="fc:frame:button:2:action" content="link"/>
         <meta property="fc:frame:button:2:target" content="https://youtube.com"/>
-        <meta property="fc:frame:post_url" content="${process.env.NEXT_PUBLIC_BASE_URL}/api/end"/>
+        <meta property="fc:frame:post_url" content="${
+          process.env.NEXT_PUBLIC_BASE_URL
+        }/api/end"/>
         </head>
         </html>`
     );
@@ -29,7 +35,7 @@ const getResponse = async (req: NextRequest): Promise<NextResponse> => {
           <meta property="fc:frame" content="vNext"/>
           <meta property="fc:frame:image" content="${
             process.env.NEXT_PUBLIC_BASE_URL
-          }/vercel.svg"/>
+          }/${images[id - 1]}.png"/>
           ${
             idAsNumber > 1 && `<meta property="fc:frame:button:1" content="<"/>`
           }

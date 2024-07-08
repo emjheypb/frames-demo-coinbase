@@ -7,7 +7,7 @@ const frameMetadata = getFrameMetadata({
       label: "Start",
     },
   ],
-  image: `${process.env.NEXT_PUBLIC_BASE_URL}/next.svg`,
+  image: `${process.env.NEXT_PUBLIC_BASE_URL}/human.png`,
   postUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
 });
 
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Frames Demo",
     description: "Second attempt on frames using coinbase",
-    images: [`${process.env.NEXT_PUBLIC_BASE_URL}/next.svg`],
+    images: [`${process.env.NEXT_PUBLIC_BASE_URL}/human.png`],
   },
   other: { ...frameMetadata },
 };

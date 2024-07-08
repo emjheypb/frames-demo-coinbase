@@ -10,7 +10,7 @@ export const POST = async (req: NextRequest): Promise<Response> => {
   headers.set("Location", `${process.env.NEXT_PUBLIC_BASE_URL}/`);
 
   const response = NextResponse.redirect(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/${path}`,
+    `${process.env.NEXT_PUBLIC_BASE_URL}/gotogithub`,
     {
       headers: headers,
       status: 302,

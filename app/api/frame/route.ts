@@ -1,3 +1,4 @@
+import { getFrameHtmlResponse } from "@coinbase/onchainkit/frame";
 import { NextRequest, NextResponse } from "next/server";
 
 const images = ["book_blue", "book_brown", "book_purple"];
@@ -33,23 +34,28 @@ const getResponse = async (req: NextRequest): Promise<NextResponse> => {
     );
   } else {
     return new NextResponse(
-      `<!DOCTYPE html><html>
-          <head>
-          <title>Frame ${id}</title>
-          <meta property="fc:frame" content="vNext"/>
-          <meta property="fc:frame:image" content="${
-            process.env.NEXT_PUBLIC_BASE_URL
-          }/${images[id - 1]}.png"/>
-          <meta property="fc:frame:button:1" content="<"/>
-          <meta property="fc:frame:button:1:post_url" content="${
-            process.env.NEXT_PUBLIC_BASE_URL
-          }/api/frame?id=${idAsNumber === 1 ? 1 : idAsNumber - 1}"/>
-          <meta property="fc:frame:button:2" content=">"/>
-          <meta property="fc:frame:button:2:post_url" content="${
-            process.env.NEXT_PUBLIC_BASE_URL
-          }/api/frame?id=${idAsNumber + 1}"/>
-          </head>
-          </html>`
+      getFrameHtmlResponse({
+        ogTitle: `Frame ${id}`,
+        buttons: [
+          {
+            label: "<",
+            postUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=${
+              idAsNumber === 1 ? 1 : idAsNumber - 1
+            }`,
+          },
+          {
+            label: ">",
+            postUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=${
+              idAsNumber === 1 ? 1 : idAsNumber + 1
+            }`,
+          },
+        ],
+        image: {
+          src: `${process.env.NEXT_PUBLIC_BASE_URL}/${images[id - 1]}.png`,
+          aspectRatio: "1:1",
+        },
+        postUrl: `${process.env.NEXT_PUBLIC_BASE_URL}`,
+      })
     );
   }
 };

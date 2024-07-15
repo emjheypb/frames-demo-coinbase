@@ -38,14 +38,14 @@ const getResponse = async (req: NextRequest): Promise<NextResponse> => {
         ogTitle: `Frame ${id}`,
         buttons: [
           {
-            label: "HOME",
-            target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
-          },
-          {
             label: "<",
             target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=${
               idAsNumber === 1 ? 1 : idAsNumber - 1
             }`,
+          },
+          {
+            label: "HOME",
+            target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
           },
           {
             label: ">",

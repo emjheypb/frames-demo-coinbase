@@ -27,13 +27,13 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
             },
           ],
           image: {
-            src: `${process.env.NEXT_PUBLIC_SITE_URL}/og?${searchParams}`,
+            src: `${process.env.NEXT_PUBLIC_BASE_URL}/og?${searchParams}`,
             aspectRatio: "1:1",
           },
           input: {
             text: "EMAIL",
           },
-          postUrl: `${process.env.NEXT_PUBLIC_SITE_URL}`,
+          postUrl: `${process.env.NEXT_PUBLIC_BASE_URL}`,
         })
       );
     }
@@ -62,13 +62,13 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
             },
           ],
           image: {
-            src: `${process.env.NEXT_PUBLIC_SITE_URL}/og?${searchParams}`,
+            src: `${process.env.NEXT_PUBLIC_BASE_URL}/og?${searchParams}`,
             aspectRatio: "1:1",
           },
           input: {
             text: "EMAIL",
           },
-          postUrl: `${process.env.NEXT_PUBLIC_SITE_URL}`,
+          postUrl: `${process.env.NEXT_PUBLIC_BASE_URL}`,
         })
       );
     }
@@ -106,13 +106,13 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
           },
         ],
         image: {
-          src: `${process.env.NEXT_PUBLIC_SITE_URL}/og?${searchParams}`,
+          src: `${process.env.NEXT_PUBLIC_BASE_URL}/og?${searchParams}`,
           aspectRatio: "1:1",
         },
         input: {
           text: "EMAIL",
         },
-        postUrl: `${process.env.NEXT_PUBLIC_SITE_URL}`,
+        postUrl: `${process.env.NEXT_PUBLIC_BASE_URL}`,
       })
     );
   }

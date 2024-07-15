@@ -22,7 +22,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
             },
             {
               label: "REGISTER",
-              postUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/register`,
+              target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/register`,
             },
           ],
           image: {
@@ -56,7 +56,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
             },
             {
               label: "REGISTER",
-              postUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/register`,
+              target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/register`,
             },
           ],
           image: {

@@ -4,10 +4,13 @@ import { Metadata } from "next";
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
-      label: "Start",
+      label: "START",
     },
   ],
-  image: `${process.env.NEXT_PUBLIC_BASE_URL}/human.png`,
+  image: {
+    src: `${process.env.NEXT_PUBLIC_BASE_URL}/human.png`,
+    aspectRatio: "1:1",
+  },
   postUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
 });
 

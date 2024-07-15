@@ -18,7 +18,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
         getFrameHtmlResponse({
           buttons: [
             {
-              label: "HOME",
+              label: "BACK",
               target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
             },
             {
@@ -53,7 +53,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
         getFrameHtmlResponse({
           buttons: [
             {
-              label: "HOME",
+              label: "BACK",
               target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
             },
             {
@@ -85,6 +85,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
           src: `${process.env.NEXT_PUBLIC_BASE_URL}/heart.png`,
           aspectRatio: "1:1",
         },
+        postUrl: `${process.env.NEXT_PUBLIC_BASE_URL}`,
       })
     );
   } catch (error) {
@@ -96,7 +97,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       getFrameHtmlResponse({
         buttons: [
           {
-            label: "HOME",
+            label: "BACK",
             target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
           },
           {

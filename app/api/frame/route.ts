@@ -38,6 +38,9 @@ const getResponse = async (req: NextRequest): Promise<NextResponse> => {
         ogTitle: `Frame ${id}`,
         buttons: [
           {
+            label:"HOME"
+          }
+          {
             label: "<",
             target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=${
               idAsNumber === 1 ? 1 : idAsNumber - 1

@@ -46,7 +46,7 @@ const getResponse = async (req: NextRequest): Promise<NextResponse> => {
           {
             label: ">",
             target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=${
-              idAsNumber === 1 ? 1 : idAsNumber + 1
+              idAsNumber > images.length ? images.length : idAsNumber + 1
             }`,
           },
         ],

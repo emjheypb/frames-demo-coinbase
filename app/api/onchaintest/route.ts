@@ -18,7 +18,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
         getFrameHtmlResponse({
           buttons: [
             {
-              label: "BACK",
+              label: "HOME",
               target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
             },
             {
@@ -53,7 +53,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
         getFrameHtmlResponse({
           buttons: [
             {
-              label: "BACK",
+              label: "HOME",
               target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
             },
             {
@@ -96,7 +96,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       getFrameHtmlResponse({
         buttons: [
           {
-            label: "BACK",
+            label: "HOME",
             target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
           },
           {

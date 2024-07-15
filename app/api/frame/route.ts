@@ -8,7 +8,7 @@ const getResponse = async (req: NextRequest): Promise<NextResponse> => {
   const id: any = searchParams.get("id");
   const idAsNumber = parseInt(id);
 
-  if (idAsNumber === 3) {
+  if (idAsNumber === images.length) {
     return new NextResponse(
       getFrameHtmlResponse({
         ogTitle: `Frame ${id}`,

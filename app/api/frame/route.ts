@@ -22,7 +22,6 @@ const getResponse = async (req: NextRequest): Promise<NextResponse> => {
         <meta property="fc:frame:button:2:action" content="link"/>
         <meta property="fc:frame:button:2:target" content="https://youtube.com"/>
         <meta property="fc:frame:button:3" content="OnChainKit"/>
-        <meta property="fc:frame:button:3:action" content="post_redirect"/>
         <meta property="fc:frame:button:3:post_url" content="${
           process.env.NEXT_PUBLIC_BASE_URL
         }/api/onchaintest"/>

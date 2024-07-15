@@ -39,6 +39,7 @@ const getResponse = async (req: NextRequest): Promise<NextResponse> => {
         buttons: [
           {
             label: "HOME",
+            target: `${process.env.NEXT_PUBLIC_BASE_URL}`,
           },
           {
             label: "<",

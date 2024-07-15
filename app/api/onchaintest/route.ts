@@ -19,6 +19,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
           buttons: [
             {
               label: "BACK",
+              target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
             },
             {
               label: "REGISTER",
@@ -53,6 +54,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
           buttons: [
             {
               label: "BACK",
+              target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
             },
             {
               label: "REGISTER",
@@ -76,6 +78,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
         buttons: [
           {
             label: "HOME",
+            target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
           },
         ],
         image: {
@@ -95,6 +98,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
         buttons: [
           {
             label: "BACK",
+            target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
           },
           {
             label: "REGISTER",

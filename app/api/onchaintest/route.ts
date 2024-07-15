@@ -23,7 +23,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
             },
             {
               label: "REGISTER",
-              target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/register`,
+              target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/onchaintest`,
             },
           ],
           image: {
@@ -58,7 +58,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
             },
             {
               label: "REGISTER",
-              target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/register`,
+              target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/onchaintest`,
             },
           ],
           image: {
@@ -102,7 +102,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
           },
           {
             label: "REGISTER",
-            target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/register`,
+            target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/onchaintest`,
           },
         ],
         image: {

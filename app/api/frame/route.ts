@@ -39,13 +39,13 @@ const getResponse = async (req: NextRequest): Promise<NextResponse> => {
         buttons: [
           {
             label: "<",
-            postUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=${
+            target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=${
               idAsNumber === 1 ? 1 : idAsNumber - 1
             }`,
           },
           {
             label: ">",
-            postUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=${
+            target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=${
               idAsNumber === 1 ? 1 : idAsNumber + 1
             }`,
           },

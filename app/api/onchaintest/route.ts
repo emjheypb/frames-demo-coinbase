@@ -11,10 +11,6 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     const email = untrustedData.inputText;
 
     if (!email || !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
-      const searchParams = new URLSearchParams({
-        title: "Invalid Email",
-      });
-
       return new NextResponse(
         getFrameHtmlResponse({
           buttons: [
@@ -28,7 +24,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
             },
           ],
           image: {
-            src: `${process.env.NEXT_PUBLIC_BASE_URL}/og?${searchParams}`,
+            src: `${process.env.NEXT_PUBLIC_BASE_URL}/og?title=Invalid%20Email`,
             aspectRatio: "1:1",
           },
           input: {

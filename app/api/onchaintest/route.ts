@@ -1,13 +1,14 @@
-import { getFrameHtmlResponse } from "@coinbase/onchainkit/frame";
+import { FrameRequest, getFrameHtmlResponse } from "@coinbase/onchainkit/frame";
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST(req: NextRequest): Promise<NextResponse> {
+async function getResponse(req: NextRequest): Promise<NextResponse> {
   try {
-    const request = await req.json();
-    const email = request.untrustedData.inputText;
+    const body: FrameRequest = await req.json();
+    const { untrustedData } = body;
+    const email = untrustedData.inputText;
 
     if (!email || !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
       const searchParams = new URLSearchParams({
@@ -117,3 +118,9 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     );
   }
 }
+
+export async function POST(req: NextRequest): Promise<Response> {
+  return getResponse(req);
+}
+
+export const dynamic = "force-dynamic";

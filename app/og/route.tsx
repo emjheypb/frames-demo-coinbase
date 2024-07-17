@@ -41,6 +41,27 @@ export async function GET(request: Request) {
           >
             {title}
           </p>
+          <div
+            style={{
+              width: "100%",
+              height: 0,
+              paddingBottom: "41%",
+              position: "relative",
+            }}
+          >
+            <iframe
+              src="https://giphy.com/embed/dhz1gKi7WKWpW"
+              width="100%"
+              height="100%"
+              style={{ position: "absolute" }}
+              allowFullScreen
+            ></iframe>
+          </div>
+          <p>
+            <a href="https://giphy.com/gifs/reaction-dhz1gKi7WKWpW">
+              via GIPHY
+            </a>
+          </p>
         </div>
       ),
       {

@@ -18,16 +18,16 @@ const getResponse = async (req: NextRequest): Promise<NextResponse> => {
             target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
           },
           {
-            label: "Register",
+            label: "REGISTER",
             target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/onchaintest`,
           },
           {
-            label: "Feed Game",
+            label: "GAME 1",
             action: "link",
             target: `https://emjheypb-webgl-demo.vercel.app/prototype2/index.html`,
           },
           {
-            label: "Jump Game",
+            label: "Game 2",
             action: "post_redirect",
             target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/end`,
           },

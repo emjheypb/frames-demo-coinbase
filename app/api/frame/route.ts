@@ -14,22 +14,22 @@ const getResponse = async (req: NextRequest): Promise<NextResponse> => {
         ogTitle: `Frame ${id}`,
         buttons: [
           {
-            label: "Github",
-            action: "post_redirect",
-            target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/end`,
-          },
-          {
-            label: "YouTube",
-            action: "link",
-            target: `https://youtube.com`,
-          },
-          {
             label: "HOME",
             target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
           },
           {
             label: "OnChainKit",
             target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/onchaintest`,
+          },
+          {
+            label: "Feed Game",
+            action: "link",
+            target: `https://emjheypb-webgl-demo.vercel.app/prototype2/index.html`,
+          },
+          {
+            label: "Jump Game",
+            action: "post_redirect",
+            target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/end`,
           },
         ],
         image: {

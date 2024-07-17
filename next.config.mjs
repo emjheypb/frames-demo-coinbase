@@ -5,7 +5,8 @@ const nextConfig = {
     return [
       {
         source: "/gotogithub",
-        destination: "https://github.com",
+        destination:
+          "https://emjheypb-webgl-demo.vercel.app/prototype3/index.html",
         permanent: false,
       },
     ];

@@ -2,17 +2,7 @@ import { ImageResponse } from "next/og";
 // App router includes @vercel/og.
 // No need to install it.
 
-// Route segment config
 export const runtime = "edge";
-
-// Image metadata
-export const alt = "About Acme";
-export const size = {
-  width: 1200,
-  height: 630,
-};
-
-export const contentType = "image/png";
 
 export async function GET(request: Request) {
   try {
@@ -24,26 +14,38 @@ export async function GET(request: Request) {
 
     return new ImageResponse(
       (
-        // ImageResponse JSX element
         <div
           style={{
-            fontSize: 128,
-            background: "white",
-            width: "100%",
-            height: "100%",
             display: "flex",
+            height: "100%",
+            width: "100%",
             alignItems: "center",
             justifyContent: "center",
+            flexDirection: "column",
+            backgroundImage: "linear-gradient(to bottom, #dbf4ff, #fff1f1)",
+            fontSize: 80,
+            fontWeight: 700,
+            textAlign: "center",
           }}
         >
-          {title}
+          <p
+            style={{
+              backgroundImage:
+                "linear-gradient(90deg, rgb(0, 124, 240), rgb(0, 223, 216))",
+              backgroundClip: "text",
+              color: "transparent",
+              fontSize: 80,
+              fontWeight: 700,
+              margin: 0,
+            }}
+          >
+            {title}
+          </p>
         </div>
       ),
-      // ImageResponse options
       {
-        // For convenience, we can re-use the exported opengraph-image
-        // size config to also set the ImageResponse's width and height.
-        ...size,
+        width: 1200,
+        height: 630,
       }
     );
   } catch (e: any) {

@@ -30,7 +30,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
             },
           ],
           image: {
-            src: `${process.env.NEXT_PUBLIC_BASE_URL}/og?title=Invalid+Email`,
+            src: `${process.env.NEXT_PUBLIC_BASE_URL}/og?title=Invalid`,
             aspectRatio: "1:1",
           },
           input: {

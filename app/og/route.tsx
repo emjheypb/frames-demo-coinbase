@@ -26,16 +26,7 @@ export const GET = async (req: NextRequest) => {
             textAlign: "center",
           }}
         >
-          <p
-            style={{
-              backgroundImage:
-                "linear-gradient(90deg, rgb(0, 124, 240), rgb(0, 223, 216))",
-              backgroundClip: "text",
-              color: "transparent",
-            }}
-          >
-            {title}
-          </p>
+          {title}
         </div>
       ),
       {

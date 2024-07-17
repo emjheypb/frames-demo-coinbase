@@ -13,7 +13,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     if (!email || !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
       const searchParams = new URLSearchParams({
         title: email
-          ? "Invalid+Email"
+          ? "Invalid Email"
           : "Enter%20your%20email%20address%20to%20register!",
       });
 
@@ -30,7 +30,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
             },
           ],
           image: {
-            src: `${process.env.NEXT_PUBLIC_BASE_URL}/og?${searchParams}`,
+            src: `${process.env.NEXT_PUBLIC_BASE_URL}/og?title=Invalid+Email`,
             aspectRatio: "1:1",
           },
           input: {

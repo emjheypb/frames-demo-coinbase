@@ -20,7 +20,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Frames Demo",
     description: "Second attempt on frames using coinbase",
-    images: [`${process.env.NEXT_PUBLIC_BASE_URL}/human.png`],
+    images: [
+      `https://media.wired.com/photos/593221d8b8eb31692072dedf/master/w_2560%2Cc_limit/MJ-giphy.gif`,
+    ],
   },
   other: { ...frameMetadata },
 };

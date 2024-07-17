@@ -33,7 +33,7 @@ export async function GET(request: Request) {
               color: "transparent",
             }}
           >
-            {JSON.stringify(searchParams)}
+            TESTING TESTING
           </p>
         </div>
       ),

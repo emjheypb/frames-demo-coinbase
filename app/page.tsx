@@ -8,7 +8,7 @@ const frameMetadata = getFrameMetadata({
     },
   ],
   image: {
-    src: `${process.env.NEXT_PUBLIC_BASE_URL}/human.png`,
+    src: `https://media.wired.com/photos/593221d8b8eb31692072dedf/master/w_2560%2Cc_limit/MJ-giphy.gif`,
     aspectRatio: "1:1",
   },
   postUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
@@ -20,9 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Frames Demo",
     description: "Second attempt on frames using coinbase",
-    images: [
-      `https://media.wired.com/photos/593221d8b8eb31692072dedf/master/w_2560%2Cc_limit/MJ-giphy.gif`,
-    ],
+    images: [`${process.env.NEXT_PUBLIC_BASE_URL}/human.png`],
   },
   other: { ...frameMetadata },
 };

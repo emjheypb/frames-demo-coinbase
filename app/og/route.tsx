@@ -14,8 +14,28 @@ export async function GET(request: Request) {
 
     return new ImageResponse(
       (
-        <div className="h-full w-full flex items-center justify-center">
-          <p>{title}</p>
+        <div
+          style={{
+            display: "flex",
+            height: "100%",
+            width: "100%",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+            textAlign: "center",
+          }}
+        >
+          <p
+            style={{
+              backgroundClip: "text",
+              color: "transparent",
+              fontSize: 80,
+              fontWeight: 700,
+              margin: 0,
+            }}
+          >
+            {title}
+          </p>
         </div>
       ),
       {

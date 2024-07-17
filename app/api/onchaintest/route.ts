@@ -13,7 +13,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     if (!email || !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
       const searchParams = new URLSearchParams({
         title: email
-          ? "Invalid%20Email"
+          ? "Invalid+Email"
           : "Enter%20your%20email%20address%20to%20register!",
       });
 

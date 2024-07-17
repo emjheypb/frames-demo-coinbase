@@ -18,7 +18,7 @@ const getResponse = async (req: NextRequest): Promise<NextResponse> => {
             target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
           },
           {
-            label: "OnChainKit",
+            label: "Register",
             target: `${process.env.NEXT_PUBLIC_BASE_URL}/api/onchaintest`,
           },
           {

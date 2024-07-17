@@ -14,33 +14,8 @@ export async function GET(request: Request) {
 
     return new ImageResponse(
       (
-        <div
-          style={{
-            display: "flex",
-            height: "100%",
-            width: "100%",
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-            backgroundImage: "linear-gradient(to bottom, #dbf4ff, #fff1f1)",
-            fontSize: 80,
-            fontWeight: 700,
-            textAlign: "center",
-          }}
-        >
-          <p
-            style={{
-              backgroundImage:
-                "linear-gradient(90deg, rgb(0, 124, 240), rgb(0, 223, 216))",
-              backgroundClip: "text",
-              color: "transparent",
-              fontSize: 80,
-              fontWeight: 700,
-              margin: 0,
-            }}
-          >
-            {title}
-          </p>
+        <div className="h-full w-full flex items-center justify-center">
+          <p>{title}</p>
         </div>
       ),
       {

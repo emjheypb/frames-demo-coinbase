@@ -27,13 +27,8 @@ export async function GET(request: Request) {
         >
           <p
             style={{
-              backgroundImage:
-                "linear-gradient(90deg, rgb(0, 124, 240), rgb(0, 223, 216))",
               backgroundClip: "text",
-              color: "transparent",
-              fontSize: 80,
-              fontWeight: 700,
-              margin: 0,
+              color: "black",
             }}
           >
             {title}

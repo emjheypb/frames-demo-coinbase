@@ -34,7 +34,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
             aspectRatio: "1:1",
           },
           input: {
-            text: "EMAIL",
+            text: `${process.env.NEXT_PUBLIC_BASE_URL}/og?${searchParams}`,
           },
           postUrl: `${process.env.NEXT_PUBLIC_BASE_URL}`,
         })
